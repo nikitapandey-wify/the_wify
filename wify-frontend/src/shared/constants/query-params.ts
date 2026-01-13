@@ -1,0 +1,16 @@
+export enum QUERY_PARAMS {
+	FORM_ID = 'formId',
+	FORM_TOKEN = 'formToken',
+	SUBMISSION_ID = 'submissionId',
+	FILTERS = 'filters',
+	SEARCH = 'search',
+	SORT = 'sort',
+	TAB = 'tab',
+	CHECKOUT = 'checkout',
+	PAGE_ID = 'page_id',
+	REDIRECT_PATH = 'redirectPath',
+	AUTH_TYPE = 'authType',
+	AUTH_TOKEN = 'token',
+	IMPORT = 'import',
+	SETTINGS = 'settings',
+}
