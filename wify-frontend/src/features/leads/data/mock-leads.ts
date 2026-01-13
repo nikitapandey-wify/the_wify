@@ -1,0 +1,58 @@
+import { Lead } from "@/features/leads/types/lead";
+
+export const mockLeads: Lead[] = [
+  {
+    id: "1",
+    name: "Alex Thompson",
+    email: "alex@techcorp.com",
+    company: "TechCorp",
+    registeredAt: "2026-01-13T10:30:00Z",
+    source: "Homepage",
+    status: "new",
+  },
+  {
+    id: "2",
+    name: "Sarah Martinez",
+    email: "sarah.m@startupinc.io",
+    company: "Startup Inc",
+    registeredAt: "2026-01-12T15:45:00Z",
+    source: "Blog",
+    status: "contacted",
+  },
+  {
+    id: "3",
+    name: "James Wilson",
+    email: "jwilson@enterprise.com",
+    company: "Enterprise Solutions",
+    registeredAt: "2026-01-12T09:20:00Z",
+    source: "Homepage",
+    status: "qualified",
+  },
+  {
+    id: "4",
+    name: "Emily Chen",
+    email: "emily@designstudio.co",
+    company: "Design Studio",
+    registeredAt: "2026-01-11T14:00:00Z",
+    source: "Referral",
+    status: "new",
+  },
+  {
+    id: "5",
+    name: "Michael Brown",
+    email: "m.brown@agency.com",
+    company: "Creative Agency",
+    registeredAt: "2026-01-10T11:30:00Z",
+    source: "Homepage",
+    status: "contacted",
+  },
+  {
+    id: "6",
+    name: "Lisa Anderson",
+    email: "lisa@fintech.io",
+    company: "FinTech Corp",
+    registeredAt: "2026-01-09T16:15:00Z",
+    source: "Blog",
+    status: "new",
+  },
+];

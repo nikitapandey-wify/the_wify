@@ -1,11 +1,18 @@
 import "@/globals.css";
 
 import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
 
 import ReactQueryClientProvider from "@/shared/components/root/react-query-client-provider";
 import { Toaster } from "@/shared/components/ui/toaster";
 
 import { APP_ENVS } from "@/shared/constants/envs";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: APP_ENVS.APP_TITLE,
