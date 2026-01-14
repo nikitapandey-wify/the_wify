@@ -72,7 +72,7 @@ export default function AboutPage() {
           </Badge>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
             Building the Future of{" "}
-            <span className="bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="text-brand-gradient">
               Team Collaboration
             </span>
           </h1>
@@ -115,16 +115,16 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-violet-500/20 via-fuchsia-500/20 to-pink-500/20 flex items-center justify-center">
+            <div className="aspect-square rounded-2xl bg-brand-muted flex items-center justify-center">
               <div className="text-center">
-                <div className="text-7xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent mb-2">
+                <div className="text-7xl font-bold text-brand-gradient mb-2">
                   2024
                 </div>
                 <p className="text-muted-foreground">Founded</p>
               </div>
             </div>
             <div className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-4 shadow-lg">
-              <div className="text-3xl font-bold text-violet-600">2K+</div>
+              <div className="text-3xl font-bold text-primary">2K+</div>
               <p className="text-sm text-muted-foreground">Happy Users</p>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <Card key={index} className="text-center">
                 <CardContent className="pt-6">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 text-violet-600 mx-auto mb-4">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-brand-muted text-brand mx-auto mb-4">
                     <value.icon className="h-7 w-7" />
                   </div>
                   <h3 className="font-semibold mb-2">{value.title}</h3>
@@ -185,11 +185,11 @@ export default function AboutPage() {
             {team.map((member, index) => (
               <Card key={index} className="group hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 text-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white text-2xl font-bold mx-auto mb-4 group-hover:scale-105 transition-transform">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-gradient text-white text-2xl font-bold mx-auto mb-4 group-hover:scale-105 transition-transform">
                     {member.avatar}
                   </div>
                   <h3 className="font-semibold mb-1">{member.name}</h3>
-                  <p className="text-sm text-violet-600 mb-3">{member.role}</p>
+                  <p className="text-sm text-primary mb-3">{member.role}</p>
                   <p className="text-sm text-muted-foreground">{member.bio}</p>
                 </CardContent>
               </Card>
@@ -199,7 +199,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-violet-600 via-fuchsia-600 to-pink-600 text-white">
+      <section className="py-20 bg-brand-gradient text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
             Join Us on This Journey
@@ -211,7 +211,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/careers"
-              className="inline-flex items-center justify-center h-12 px-8 bg-white text-violet-600 rounded-lg font-semibold hover:bg-white/90 transition-colors"
+              className="inline-flex items-center justify-center h-12 px-8 bg-white text-brand rounded-lg font-semibold hover:bg-white/90 transition-colors"
             >
               View Open Positions
             </a>

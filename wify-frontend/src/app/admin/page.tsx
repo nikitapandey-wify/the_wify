@@ -63,7 +63,7 @@ export default function AdminDashboard() {
           </p>
         </div>
         <Link href="/admin/blogs/new">
-          <Button className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white border-0">
+          <Button className="bg-brand-gradient text-brand-foreground border-0 hover:opacity-90">
             <Plus className="h-4 w-4 mr-2" />
             New Post
           </Button>
@@ -82,7 +82,7 @@ export default function AdminDashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stat.value}</div>
-              <p className="text-xs text-emerald-600 flex items-center gap-1 mt-1">
+              <p className="text-xs text-success flex items-center gap-1 mt-1">
                 <ArrowUpRight className="h-3 w-3" />
                 {stat.change}
               </p>
@@ -112,7 +112,7 @@ export default function AdminDashboard() {
                 className="flex items-center justify-between p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors"
               >
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-lg overflow-hidden bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
+                  <div className="h-12 w-12 rounded-lg overflow-hidden bg-brand-gradient flex items-center justify-center">
                     {post.coverImage ? (
                       <img
                         src={post.coverImage}
@@ -160,7 +160,7 @@ export default function AdminDashboard() {
         <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
           <Link href="/admin/blogs/new">
             <CardContent className="flex items-center gap-4 p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 text-violet-600 group-hover:from-violet-500/20 group-hover:to-fuchsia-500/20 transition-colors">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-muted text-brand group-hover:bg-brand/20 transition-colors">
                 <FileText className="h-6 w-6" />
               </div>
               <div>
@@ -176,7 +176,7 @@ export default function AdminDashboard() {
         <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
           <Link href="/admin/leads">
             <CardContent className="flex items-center gap-4 p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 text-emerald-600 group-hover:from-emerald-500/20 group-hover:to-cyan-500/20 transition-colors">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-success/10 text-success group-hover:bg-success/20 transition-colors">
                 <Users className="h-6 w-6" />
               </div>
               <div>
@@ -192,7 +192,7 @@ export default function AdminDashboard() {
         <Card className="hover:shadow-lg transition-shadow cursor-pointer group">
           <Link href="/" target="_blank">
             <CardContent className="flex items-center gap-4 p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500/10 to-orange-500/10 text-amber-600 group-hover:from-amber-500/20 group-hover:to-orange-500/20 transition-colors">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-warning/10 text-warning group-hover:bg-warning/20 transition-colors">
                 <Eye className="h-6 w-6" />
               </div>
               <div>

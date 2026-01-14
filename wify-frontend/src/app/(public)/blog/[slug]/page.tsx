@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-8 border-b border-border">
             <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white font-medium">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-gradient text-white font-medium">
                 {post.author.avatar}
               </div>
               <div>
@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         [&>p]:text-muted-foreground [&>p]:leading-relaxed [&>p]:mb-4
                         [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-4 [&>ul>li]:text-muted-foreground [&>ul>li]:mb-2
                         [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-4 [&>ol>li]:text-muted-foreground [&>ol>li]:mb-2
-                        [&>blockquote]:border-l-4 [&>blockquote]:border-violet-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-muted-foreground
+                        [&>blockquote]:border-l-4 [&>blockquote]:border-brand [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-muted-foreground
                         [&>pre]:bg-muted [&>pre]:p-4 [&>pre]:rounded-lg [&>pre]:overflow-x-auto
                         [&>code]:bg-muted [&>code]:px-1.5 [&>code]:py-0.5 [&>code]:rounded [&>code]:text-sm
                         [&>strong]:text-foreground [&>strong]:font-semibold"
@@ -184,7 +184,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <Card className="mb-12 bg-muted/30">
           <CardContent className="p-6">
             <div className="flex items-start gap-4">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white text-lg font-medium">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-white text-lg font-medium">
                 {post.author.avatar}
               </div>
               <div>
@@ -220,14 +220,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                           className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       ) : (
-                        <div className="absolute inset-0 bg-gradient-to-br from-violet-500 to-fuchsia-500" />
+                        <div className="absolute inset-0 bg-brand-gradient" />
                       )}
                     </div>
                     <CardContent className="p-4">
                       <Badge variant="secondary" className="mb-2 text-xs">
                         {relatedPost.category}
                       </Badge>
-                      <h3 className="font-semibold line-clamp-2 group-hover:text-violet-600 transition-colors">
+                      <h3 className="font-semibold line-clamp-2 group-hover:text-primary transition-colors">
                         {relatedPost.title}
                       </h3>
                     </CardContent>

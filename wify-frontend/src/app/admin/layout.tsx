@@ -53,7 +53,7 @@ export default function AdminLayout({
           {/* Logo */}
           <div className="flex h-16 items-center justify-between px-4 border-b border-border">
             <Link href="/admin" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-gradient text-white">
                 <Sparkles className="h-5 w-5" />
               </div>
               <div>
@@ -87,7 +87,7 @@ export default function AdminLayout({
                   className={cn(
                     "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
                     isActive
-                      ? "bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 text-violet-600 dark:text-violet-400"
+                      ? "bg-brand-muted text-primary"
                       : "text-muted-foreground hover:text-foreground hover:bg-accent"
                   )}
                 >

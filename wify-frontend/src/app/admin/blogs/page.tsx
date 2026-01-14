@@ -40,7 +40,7 @@ export default function AdminBlogsPage() {
           </p>
         </div>
         <Link href="/admin/blogs/new">
-          <Button className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white border-0">
+          <Button className="bg-brand-gradient text-brand-foreground border-0 hover:opacity-90">
             <Plus className="h-4 w-4 mr-2" />
             New Post
           </Button>
@@ -89,7 +89,7 @@ export default function AdminBlogsPage() {
                 className="flex items-center justify-between p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors group"
               >
                 <div className="flex items-center gap-4 flex-1 min-w-0">
-                  <div className="h-16 w-24 rounded-lg overflow-hidden bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center shrink-0">
+                  <div className="h-16 w-24 rounded-lg overflow-hidden bg-brand-gradient flex items-center justify-center shrink-0">
                     {post.coverImage ? (
                       <img
                         src={post.coverImage}

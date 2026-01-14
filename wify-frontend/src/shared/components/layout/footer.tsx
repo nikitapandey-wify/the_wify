@@ -35,10 +35,10 @@ export default function Footer() {
               href="/"
               className="flex items-center gap-2 text-xl font-bold tracking-tight"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-gradient text-white">
                 <Sparkles className="h-5 w-5" />
               </div>
-              <span className="bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
+              <span className="text-brand-gradient">
                 WIFY
               </span>
             </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
             © {new Date().getFullYear()} WIFY. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Made with ❤️ for the community
+            Made with care for the community
           </p>
         </div>
       </div>

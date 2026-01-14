@@ -131,7 +131,7 @@ export default function AdminLeadsPage() {
                 className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors gap-4"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white text-sm font-medium shrink-0">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-gradient text-white text-sm font-medium shrink-0">
                     {lead.name
                       .split(" ")
                       .map((n) => n[0])

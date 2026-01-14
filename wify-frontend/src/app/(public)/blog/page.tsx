@@ -54,7 +54,7 @@ export default function BlogPage() {
               size="sm"
               className={
                 category.slug === "all"
-                  ? "bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white border-0"
+                  ? "bg-brand-gradient text-brand-foreground border-0 hover:opacity-90"
                   : ""
               }
             >
@@ -68,7 +68,7 @@ export default function BlogPage() {
 
         {/* Featured Post */}
         <Link href={`/blog/${featuredPost.slug}`} className="block mb-12">
-          <Card className="overflow-hidden group hover:shadow-xl hover:shadow-violet-500/5 transition-all duration-300">
+          <Card className="overflow-hidden group hover:shadow-xl hover:shadow-brand transition-all duration-300">
             <div className="grid md:grid-cols-2">
               <div className="relative aspect-video md:aspect-auto overflow-hidden">
                 {featuredPost.coverImage ? (
@@ -78,7 +78,7 @@ export default function BlogPage() {
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-violet-500 to-fuchsia-500" />
+                  <div className="absolute inset-0 bg-brand-gradient" />
                 )}
                 <div className="absolute top-4 left-4">
                   <Badge className="bg-white/90 text-foreground backdrop-blur-sm">
@@ -90,7 +90,7 @@ export default function BlogPage() {
                 <Badge variant="secondary" className="w-fit mb-4">
                   {featuredPost.category}
                 </Badge>
-                <h2 className="text-2xl lg:text-3xl font-bold mb-3 group-hover:text-violet-600 transition-colors">
+                <h2 className="text-2xl lg:text-3xl font-bold mb-3 group-hover:text-primary transition-colors">
                   {featuredPost.title}
                 </h2>
                 <p className="text-muted-foreground mb-6 line-clamp-2">
@@ -107,7 +107,7 @@ export default function BlogPage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white text-sm font-medium">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-gradient text-white text-sm font-medium">
                     {featuredPost.author.avatar}
                   </div>
                   <div>
@@ -128,7 +128,7 @@ export default function BlogPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {otherPosts.map((post) => (
             <Link key={post.id} href={`/blog/${post.slug}`}>
-              <Card className="h-full overflow-hidden group hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 hover:-translate-y-1">
+              <Card className="h-full overflow-hidden group hover:shadow-lg hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
                 <div className="relative aspect-video overflow-hidden">
                   {post.coverImage ? (
                     <img
@@ -137,7 +137,7 @@ export default function BlogPage() {
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-violet-500 to-fuchsia-500" />
+                    <div className="absolute inset-0 bg-brand-gradient" />
                   )}
                 </div>
                 <CardHeader className="pb-2">
@@ -149,7 +149,7 @@ export default function BlogPage() {
                       {post.readingTime}
                     </span>
                   </div>
-                  <CardTitle className="text-lg line-clamp-2 group-hover:text-violet-600 transition-colors">
+                  <CardTitle className="text-lg line-clamp-2 group-hover:text-primary transition-colors">
                     {post.title}
                   </CardTitle>
                 </CardHeader>
@@ -159,7 +159,7 @@ export default function BlogPage() {
                   </CardDescription>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white text-xs font-medium">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-gradient text-white text-xs font-medium">
                         {post.author.avatar}
                       </div>
                       <span className="text-sm font-medium">
@@ -178,14 +178,14 @@ export default function BlogPage() {
 
         {/* Newsletter CTA */}
         <div className="mt-16 lg:mt-24 text-center">
-          <Card className="max-w-2xl mx-auto bg-gradient-to-br from-violet-500/5 to-fuchsia-500/5 border-violet-500/10">
+          <Card className="max-w-2xl mx-auto bg-brand-muted border-brand/10">
             <CardContent className="py-10">
               <h3 className="text-2xl font-bold mb-3">Stay in the Loop</h3>
               <p className="text-muted-foreground mb-6">
                 Get the latest articles and insights delivered to your inbox.
               </p>
               <Link href="/#register">
-                <Button className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white border-0">
+                <Button className="bg-brand-gradient text-brand-foreground border-0 hover:opacity-90">
                   Subscribe to Updates
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </Button>

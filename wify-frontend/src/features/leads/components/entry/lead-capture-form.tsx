@@ -56,8 +56,8 @@ export default function LeadCaptureForm() {
   if (isSubmitted) {
     return (
       <div className="flex flex-col items-center justify-center py-12 text-center animate-in fade-in zoom-in duration-300">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/15 mb-4">
-          <CheckCircle2 className="h-8 w-8 text-emerald-500" />
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-success/15 mb-4">
+          <CheckCircle2 className="h-8 w-8 text-success" />
         </div>
         <h3 className="text-xl font-semibold mb-2">You&apos;re on the list!</h3>
         <p className="text-muted-foreground">
@@ -117,7 +117,7 @@ export default function LeadCaptureForm() {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white border-0 text-base font-medium"
+        className="w-full h-12 bg-brand-gradient text-brand-foreground border-0 hover:opacity-90 text-base font-medium"
       >
         {isSubmitting ? (
           <>

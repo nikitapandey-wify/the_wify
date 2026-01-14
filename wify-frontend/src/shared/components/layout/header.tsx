@@ -26,10 +26,10 @@ export default function Header() {
             href="/"
             className="flex items-center gap-2 text-xl font-bold tracking-tight"
           >
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-gradient text-white">
               <Sparkles className="h-5 w-5" />
             </div>
-            <span className="bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
+            <span className="text-brand-gradient">
               WIFY
             </span>
           </Link>
@@ -62,7 +62,7 @@ export default function Header() {
             <Link href="/#register">
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white border-0"
+                className="bg-brand-gradient text-brand-foreground border-0 hover:opacity-90"
               >
                 Get Started
               </Button>
@@ -109,7 +109,7 @@ export default function Header() {
                   </Button>
                 </Link>
                 <Link href="/#register" onClick={() => setMobileMenuOpen(false)}>
-                  <Button className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white border-0">
+                  <Button className="w-full bg-brand-gradient text-brand-foreground border-0 hover:opacity-90">
                     Get Started
                   </Button>
                 </Link>

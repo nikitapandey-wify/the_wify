@@ -185,7 +185,7 @@ export default function BlogEditor({ initialData, isNew = false }: BlogEditorPro
                 </span>
               ) : lastSaved ? (
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-3 w-3 text-emerald-500" />
+                  <CheckCircle2 className="h-3 w-3 text-success" />
                   Saved {lastSaved.toLocaleTimeString()}
                 </span>
               ) : hasUnsavedChanges ? (
@@ -205,7 +205,7 @@ export default function BlogEditor({ initialData, isNew = false }: BlogEditorPro
           <Button
             onClick={handlePublish}
             disabled={isSaving}
-            className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white border-0"
+            className="bg-brand-gradient text-brand-foreground border-0 hover:opacity-90"
           >
             <Eye className="h-4 w-4 mr-2" />
             Publish

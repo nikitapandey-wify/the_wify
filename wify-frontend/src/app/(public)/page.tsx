@@ -88,8 +88,8 @@ export default function HomePage() {
     <div className="relative">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-br from-violet-500/20 via-fuchsia-500/20 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-cyan-500/10 via-blue-500/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-brand-muted rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-info/5 rounded-full blur-3xl" />
       </div>
 
       {/* Hero Section */}
@@ -99,13 +99,13 @@ export default function HomePage() {
             {/* Left - Content */}
             <div className="text-center lg:text-left">
               <Badge variant="secondary" className="mb-6 px-4 py-1.5">
-                <Star className="h-3 w-3 mr-1.5 fill-amber-500 text-amber-500" />
+                <Star className="h-3 w-3 mr-1.5 fill-warning text-warning" />
                 Now in Public Beta
               </Badge>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
                 Build the Future{" "}
-                <span className="bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600 bg-clip-text text-transparent">
+                <span className="text-brand-gradient">
                   Your Way
                 </span>
               </h1>
@@ -119,7 +119,7 @@ export default function HomePage() {
                 <Link href="#register">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white border-0 h-12 px-8"
+                    className="w-full sm:w-auto bg-brand-gradient text-brand-foreground border-0 hover:opacity-90 h-12 px-8"
                   >
                     Start Free Trial
                     <ArrowRight className="h-4 w-4 ml-1" />
@@ -135,16 +135,14 @@ export default function HomePage() {
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-8 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {["bg-violet-500", "bg-fuchsia-500", "bg-pink-500"].map(
-                      (color, i) => (
-                        <div
-                          key={i}
-                          className={`h-8 w-8 rounded-full ${color} border-2 border-background flex items-center justify-center text-xs font-medium text-white`}
-                        >
-                          {["A", "B", "C"][i]}
-                        </div>
-                      )
-                    )}
+                    {[0, 1, 2].map((i) => (
+                      <div
+                        key={i}
+                        className="h-8 w-8 rounded-full bg-brand-gradient border-2 border-background flex items-center justify-center text-xs font-medium text-white"
+                      >
+                        {["A", "B", "C"][i]}
+                      </div>
+                    ))}
                   </div>
                   <span>2,000+ users</span>
                 </div>
@@ -152,7 +150,7 @@ export default function HomePage() {
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star
                       key={star}
-                      className="h-4 w-4 fill-amber-400 text-amber-400"
+                      className="h-4 w-4 fill-warning text-warning"
                     />
                   ))}
                   <span className="ml-1">4.9/5</span>
@@ -162,7 +160,7 @@ export default function HomePage() {
 
             {/* Right - Registration Form */}
             <div id="register" className="scroll-mt-24">
-              <Card className="max-w-md mx-auto lg:ml-auto backdrop-blur-sm bg-card/80 border-border/50 shadow-2xl shadow-violet-500/5">
+              <Card className="max-w-md mx-auto lg:ml-auto backdrop-blur-sm bg-card/80 border-border/50 shadow-2xl shadow-brand">
                 <CardHeader className="text-center pb-2">
                   <CardTitle className="text-2xl">Get Early Access</CardTitle>
                   <CardDescription>
@@ -198,10 +196,10 @@ export default function HomePage() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 hover:-translate-y-1 bg-card/50 backdrop-blur-sm"
+                className="group hover:shadow-lg hover:shadow-brand transition-all duration-300 hover:-translate-y-1 bg-card/50 backdrop-blur-sm"
               >
                 <CardHeader>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 text-violet-600 mb-4 group-hover:from-violet-500/20 group-hover:to-fuchsia-500/20 transition-colors">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-muted text-brand mb-4 group-hover:bg-brand/20 transition-colors">
                     <feature.icon className="h-6 w-6" />
                   </div>
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
@@ -242,7 +240,7 @@ export default function HomePage() {
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star
                         key={star}
-                        className="h-4 w-4 fill-amber-400 text-amber-400"
+                        className="h-4 w-4 fill-warning text-warning"
                       />
                     ))}
                   </div>
@@ -250,7 +248,7 @@ export default function HomePage() {
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white text-sm font-medium">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-gradient text-white text-sm font-medium">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -268,7 +266,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-violet-600 via-fuchsia-600 to-pink-600 text-white relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-brand-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50" />
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
@@ -282,7 +280,7 @@ export default function HomePage() {
             <Link href="#register">
               <Button
                 size="lg"
-                className="bg-white text-violet-600 hover:bg-white/90 h-12 px-8 text-base font-semibold"
+                className="bg-white text-brand hover:bg-white/90 h-12 px-8 text-base font-semibold"
               >
                 Get Started Free
                 <ArrowRight className="h-4 w-4 ml-1" />
