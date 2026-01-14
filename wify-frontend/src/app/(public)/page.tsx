@@ -19,43 +19,50 @@ import {
 } from "@/shared/components/ui/card";
 import { Badge } from "@/shared/components/ui/badge";
 import LeadCaptureForm from "@/features/leads/components/entry/lead-capture-form";
+import {
+  ShieldCheck,
+  FileText,
+  AlertTriangle,
+  Wifi,
+  Scale,
+} from "lucide-react";
 
 const features = [
   {
-    icon: Zap,
-    title: "Lightning Fast",
+    title: "Secure User Access Login & OTP",
     description:
-      "Optimized for speed with cutting-edge technology that keeps your workflow seamless.",
+      "Secure user access login and OTP verification for enhanced security.",
+    icon: ShieldCheck,
   },
   {
-    icon: Shield,
-    title: "Enterprise Security",
+    title: "KYC & Activity Logs",
     description:
-      "Bank-grade encryption and security protocols to keep your data safe and compliant.",
+      "KYC verification and detailed activity logs for compliance and accountability.",
+    icon: FileText,
   },
   {
-    icon: Rocket,
-    title: "Scale Effortlessly",
+    title: "Cyber Threat Protection",
     description:
-      "From startup to enterprise, our infrastructure grows with your ambitions.",
+      "Real-time threat detection and prevention to safeguard your data.",
+    icon: AlertTriangle,
   },
   {
+    title: "Customer Data Management",
+    description:
+      "Efficient customer data management and organization for better customer relationships.",
     icon: Users,
-    title: "Team Collaboration",
-    description:
-      "Real-time collaboration tools that bring your team together, wherever they are.",
   },
   {
-    icon: BarChart3,
-    title: "Powerful Analytics",
+    title: "Bandwidth & Usage Control",
     description:
-      "Deep insights into your performance with customizable dashboards and reports.",
+      "Manage bandwidth usage and control access to resources for efficient resource allocation.",
+    icon: Wifi,
   },
   {
-    icon: Globe,
-    title: "Global Reach",
+    title: "Legal & Compliance",
     description:
-      "Multi-region deployment ensures low latency for users around the world.",
+      "Compliance with legal and regulatory requirements for peace of mind.",
+    icon: Scale,
   },
 ];
 
@@ -98,16 +105,14 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Content */}
             <div className="text-center lg:text-left">
-              <Badge variant="secondary" className="mb-6 px-4 py-1.5">
+              {/* <Badge variant="secondary" className="mb-6 px-4 py-1.5">
                 <Star className="h-3 w-3 mr-1.5 fill-warning text-warning" />
                 Now in Public Beta
-              </Badge>
+              </Badge> */}
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
                 Build the Future{" "}
-                <span className="text-brand-gradient">
-                  Your Way
-                </span>
+                <span className="text-brand-gradient">Your Way</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -126,13 +131,17 @@ export default function HomePage() {
                   </Button>
                 </Link>
                 <Link href="/blog">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto h-12 px-8">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="w-full sm:w-auto h-12 px-8"
+                  >
                     Read Our Blog
                   </Button>
                 </Link>
               </div>
 
-              <div className="mt-10 flex items-center justify-center lg:justify-start gap-8 text-sm text-muted-foreground">
+              {/* <div className="mt-10 flex items-center justify-center lg:justify-start gap-8 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
                     {[0, 1, 2].map((i) => (
@@ -155,7 +164,7 @@ export default function HomePage() {
                   ))}
                   <span className="ml-1">4.9/5</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Right - Registration Form */}
@@ -180,9 +189,6 @@ export default function HomePage() {
       <section id="features" className="py-20 lg:py-32 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              Features
-            </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
               Everything You Need to Succeed
             </h2>
@@ -212,14 +218,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+            
       {/* Testimonials Section */}
       <section className="py-20 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
+            {/* <Badge variant="outline" className="mb-4">
               Testimonials
-            </Badge>
+            </Badge> */}
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
               Loved by Teams Worldwide
             </h2>
@@ -266,7 +272,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-brand-gradient text-white relative overflow-hidden">
+      {/* <section className="py-20 lg:py-32 bg-brand-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50" />
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
@@ -288,7 +294,6 @@ export default function HomePage() {
             </Link>
             <Link href="/blog">
               <Button
-                variant="outline"
                 size="lg"
                 className="border-white/30 text-white hover:bg-white/10 h-12 px-8 text-base"
               >
@@ -297,7 +302,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
