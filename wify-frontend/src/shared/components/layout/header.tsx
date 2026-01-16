@@ -84,6 +84,11 @@ const navLinks: NavLink[] = [
     type : "link",
     href : "/blog",
   },
+  {
+    label: "About",
+    type : "link",
+    href : "/about",
+  },
 ];
 
 export default function Header() {

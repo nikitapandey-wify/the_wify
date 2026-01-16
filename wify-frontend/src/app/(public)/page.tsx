@@ -1,12 +1,11 @@
 import {
-  Zap,
-  Shield,
-  Rocket,
   Users,
-  BarChart3,
-  Globe,
   ArrowRight,
   Star,
+  Check,
+  Zap,
+  Building2,
+  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/shared/components/ui/button";
@@ -16,8 +15,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shared/components/ui/card";
-import { Badge } from "@/shared/components/ui/badge";
+} from "@/shared/components/ui/card";   
 import LeadCaptureForm from "@/features/leads/components/entry/lead-capture-form";
 import {
   ShieldCheck,
@@ -26,6 +24,7 @@ import {
   Wifi,
   Scale,
 } from "lucide-react";
+import SignUpForm from "@/features/signup/components/entry/SignUpForm";
 
 const features = [
   {
@@ -87,6 +86,67 @@ const testimonials = [
     content:
       "The analytics alone are worth it. We've seen a 40% improvement in team productivity.",
     avatar: "ER",
+  },
+];
+
+const pricingPlans = [
+  {
+    name: "Starter",
+    description: "Perfect for small teams getting started",
+    price: "Free",
+    period: "forever",
+    icon: Zap,
+    featured: false,
+    features: [
+      "Up to 5 team members",
+      "Basic security features",
+      "1GB storage",
+      "Email support",
+      "Basic analytics",
+      "Community access",
+    ],
+    cta: "Get Started",
+    ctaVariant: "outline" as const,
+  },
+  {
+    name: "Professional",
+    description: "Best for growing businesses",
+    price: "$29",
+    period: "per user/month",
+    icon: Sparkles,
+    featured: true,
+    features: [
+      "Unlimited team members",
+      "Advanced security & OTP",
+      "50GB storage",
+      "Priority support",
+      "Advanced analytics",
+      "KYC verification",
+      "Custom integrations",
+      "API access",
+    ],
+    cta: "Start Free Trial",
+    ctaVariant: "default" as const,
+  },
+  {
+    name: "Enterprise",
+    description: "For large organizations with custom needs",
+    price: "Custom",
+    period: "contact us",
+    icon: Building2,
+    featured: false,
+    features: [
+      "Everything in Professional",
+      "Unlimited storage",
+      "24/7 dedicated support",
+      "Custom security policies",
+      "On-premise deployment",
+      "SLA guarantee",
+      "Compliance assistance",
+      "Training & onboarding",
+    ],
+    cta: "Contact Sales",
+    ctaVariant: "outline" as const,
   },
 ];
 
@@ -168,7 +228,7 @@ export default function HomePage() {
             </div>
 
             {/* Right - Registration Form */}
-            <div id="register" className="scroll-mt-24">
+            {/* <div id="register" className="scroll-mt-24">
               <Card className="max-w-md mx-auto lg:ml-auto backdrop-blur-sm bg-card/80 border-border/50 shadow-2xl shadow-brand">
                 <CardHeader className="text-center pb-2">
                   <CardTitle className="text-2xl">Get Early Access</CardTitle>
@@ -180,7 +240,8 @@ export default function HomePage() {
                   <LeadCaptureForm />
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
+            <SignUpForm />
           </div>
         </div>
       </section>
@@ -215,6 +276,112 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 lg:py-32 scroll-mt-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Choose the plan that fits your needs. All plans include a 30-day free trial.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            {pricingPlans.map((plan, index) => (
+              <Card
+                key={index}
+                className={`relative flex flex-col transition-all duration-300 hover:-translate-y-1 ${
+                  plan.featured
+                    ? "border-primary shadow-2xl shadow-brand scale-[1.02] bg-card"
+                    : "bg-card/50 backdrop-blur-sm hover:shadow-lg hover:shadow-brand"
+                }`}
+              >
+                {plan.featured && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <span className="bg-brand-gradient text-white text-sm font-medium px-4 py-1 rounded-full">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <CardHeader className="text-center pb-2">
+                  <div className={`flex h-12 w-12 items-center justify-center rounded-xl mx-auto mb-4 ${
+                    plan.featured 
+                      ? "bg-brand-gradient text-white" 
+                      : "bg-brand-muted text-brand"
+                  }`}>
+                    <plan.icon className="h-6 w-6" />
+                  </div>
+                  <CardTitle className="text-xl">{plan.name}</CardTitle>
+                  <CardDescription className="text-sm">
+                    {plan.description}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="flex-1 flex flex-col">
+                  <div className="text-center mb-6">
+                    <span className="text-4xl font-bold">{plan.price}</span>
+                    {plan.price !== "Free" && plan.price !== "Custom" && (
+                      <span className="text-muted-foreground text-sm ml-1">
+                        /{plan.period.split("/")[1] || "month"}
+                      </span>
+                    )}
+                    <p className="text-sm text-muted-foreground mt-1">
+                      {plan.period}
+                    </p>
+                  </div>
+
+                  <ul className="space-y-3 mb-8 flex-1">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start gap-3">
+                        <div className={`flex h-5 w-5 items-center justify-center rounded-full shrink-0 mt-0.5 ${
+                          plan.featured 
+                            ? "bg-brand-gradient text-white" 
+                            : "bg-brand-muted text-brand"
+                        }`}>
+                          <Check className="h-3 w-3" />
+                        </div>
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link href="#register" className="mt-auto">
+                    <Button
+                      variant={plan.ctaVariant}
+                      className={`w-full h-11 ${
+                        plan.featured
+                          ? "bg-brand-gradient text-brand-foreground border-0 hover:opacity-90"
+                          : ""
+                      }`}
+                    >
+                      {plan.cta}
+                      <ArrowRight className="h-4 w-4 ml-1" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* FAQ or Trust badges */}
+          <div className="mt-16 text-center">
+            <p className="text-sm text-muted-foreground mb-4">
+              Trusted by 2,000+ companies worldwide
+            </p>
+            <div className="flex items-center justify-center gap-8 flex-wrap opacity-60">
+              {["TechCorp", "StartupX", "DataFlow", "CloudBase", "SecureNet"].map((company) => (
+                <span key={company} className="text-lg font-semibold text-muted-foreground">
+                  {company}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
