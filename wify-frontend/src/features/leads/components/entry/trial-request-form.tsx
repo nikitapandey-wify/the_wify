@@ -136,7 +136,8 @@ export default function TrialRequestForm() {
                   value={formData.firstName}
                   onChange={handleChange}
                   onBlur={() => handleBlur("firstName")}
-                  disabled={isSubmitting}``
+                  disabled={isSubmitting}
+                  required
                   className={cn(
                     "h-9 text-sm bg-background",
                     touched.firstName && !formData.firstName.trim() && "border-destructive"
