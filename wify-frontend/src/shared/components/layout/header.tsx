@@ -134,11 +134,11 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex md:items-center md:gap-3">
-            {/* <Link href="/admin">
+            <Link href="/admin">
               <Button variant="ghost" size="sm">
               Admin
               </Button>
-              </Link> */}
+              </Link>
             <Link href="/#register">
               <Button
                 size="sm"

@@ -16,7 +16,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/shared/components/ui/card";   
-import LeadCaptureForm from "@/features/leads/components/entry/lead-capture-form";
+import TrialRequestForm from "@/features/leads/components/entry/trial-request-form";
 import {
   ShieldCheck,
   FileText,
@@ -24,7 +24,7 @@ import {
   Wifi,
   Scale,
 } from "lucide-react";
-import SignUpForm from "@/features/signup/components/entry/SignUpForm";
+// import SignUpForm from "@/features/signup/components/entry/SignUpForm";
 
 const features = [
   {
@@ -160,7 +160,7 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32">
+      <section className="relative py-10 lg:py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Content */}
@@ -241,7 +241,8 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             </div> */}
-            <SignUpForm />
+            {/* <SignUpForm /> */}
+            <TrialRequestForm />
           </div>
         </div>
       </section>
@@ -311,13 +312,13 @@ export default function HomePage() {
                 )}
                 
                 <CardHeader className="text-center pb-2">
-                  <div className={`flex h-12 w-12 items-center justify-center rounded-xl mx-auto mb-4 ${
+                  {/* <div className={`flex h-12 w-12 items-center justify-center rounded-xl mx-auto mb-4 ${
                     plan.featured 
                       ? "bg-brand-gradient text-white" 
                       : "bg-brand-muted text-brand"
                   }`}>
                     <plan.icon className="h-6 w-6" />
-                  </div>
+                  </div> */}
                   <CardTitle className="text-xl">{plan.name}</CardTitle>
                   <CardDescription className="text-sm">
                     {plan.description}
